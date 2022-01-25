@@ -27,7 +27,7 @@ def render(charmap: NDArray[Any], font: ImageFont, width_px: int, height_px: int
     IMAGE_H_CELLS, IMAGE_W_CELLS = charmap.shape
     canvas = Image.new("RGBA", (IMAGE_W_CELLS * width_px, IMAGE_H_CELLS * height_px))
     draw = ImageDraw.Draw(canvas)
-
+    draw.rectangle((0, 0, IMAGE_W_CELLS * width_px, IMAGE_H_CELLS * height_px), fill='black')
     for cell_y, row in enumerate(charmap):
         for cell_x, char in enumerate(row):
             draw.text((width_px * cell_x, height_px * cell_y), chr(char), fill="white", font=font)
