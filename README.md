@@ -37,3 +37,8 @@ Exact command used to generate the example image:
 python make_tileset.py Px437_IBM_Model3x_Alt3.ttf --width 8 --height 16
 ```
 Font file was found at https://int10h.org/oldschool-pc-fonts
+
+# Example
+
+python make_tileset.py Ac437_IBM_VGA_9x16-2x.ttf --width 11 --height 16
+
